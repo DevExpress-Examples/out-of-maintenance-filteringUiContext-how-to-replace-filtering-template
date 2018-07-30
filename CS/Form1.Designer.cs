@@ -28,11 +28,11 @@
             this.taskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colCategoryID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.categoryLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colCaption = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDescription = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.categoryLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.categoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.filteringUIContext1 = new DevExpress.Utils.Filtering.FilteringUIContext(this.components);
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.CategoryIDFilterUIEditorContainerEdit = new DevExpress.XtraEditors.Filtering.FilterUIEditorContainerEdit();
@@ -99,8 +99,20 @@
             this.colCategoryID.ColumnEdit = this.categoryLookUpEdit1;
             this.colCategoryID.FieldName = "CategoryID";
             this.colCategoryID.Name = "colCategoryID";
-            this.colCategoryID.Visible = true;
-            this.colCategoryID.VisibleIndex = 2;
+            // 
+            // categoryLookUpEdit1
+            // 
+            this.categoryLookUpEdit1.AutoHeight = false;
+            this.categoryLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.categoryLookUpEdit1.DataSource = this.categoryBindingSource;
+            this.categoryLookUpEdit1.DisplayMember = "Name";
+            this.categoryLookUpEdit1.Name = "categoryLookUpEdit1";
+            this.categoryLookUpEdit1.ValueMember = "ID";
+            // 
+            // categoryBindingSource
+            // 
+            this.categoryBindingSource.DataSource = typeof(WindowsFormsApplication1.Category);
             // 
             // colCaption
             // 
@@ -120,20 +132,6 @@
             // 
             this.colStatus.FieldName = "Status";
             this.colStatus.Name = "colStatus";
-            // 
-            // categoryLookUpEdit1
-            // 
-            this.categoryLookUpEdit1.AutoHeight = false;
-            this.categoryLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.categoryLookUpEdit1.DataSource = this.categoryBindingSource;
-            this.categoryLookUpEdit1.DisplayMember = "Name";
-            this.categoryLookUpEdit1.Name = "categoryLookUpEdit1";
-            this.categoryLookUpEdit1.ValueMember = "ID";
-            // 
-            // categoryBindingSource
-            // 
-            this.categoryBindingSource.DataSource = typeof(WindowsFormsApplication1.Category);
             // 
             // filteringUIContext1
             // 
@@ -163,7 +161,7 @@
             this.CategoryIDFilterUIEditorContainerEdit.Properties.LookupOptions.ItemCount = 4;
             this.CategoryIDFilterUIEditorContainerEdit.Properties.LookupUIEditorType = DevExpress.Utils.Filtering.LookupUIEditorType.Default;
             this.CategoryIDFilterUIEditorContainerEdit.Properties.UseFlags = true;
-            this.CategoryIDFilterUIEditorContainerEdit.Size = new System.Drawing.Size(179, 22);
+            this.CategoryIDFilterUIEditorContainerEdit.Size = new System.Drawing.Size(178, 22);
             this.CategoryIDFilterUIEditorContainerEdit.StyleController = this.layoutControl1;
             this.CategoryIDFilterUIEditorContainerEdit.TabIndex = 6;
             // 
@@ -175,7 +173,7 @@
             this.StatusFilterUIEditorContainerEdit.Name = "StatusFilterUIEditorContainerEdit";
             this.StatusFilterUIEditorContainerEdit.Properties.LookupOptions.LightView = DevExpress.Utils.DefaultBoolean.False;
             this.StatusFilterUIEditorContainerEdit.Properties.LookupUIEditorType = DevExpress.Utils.Filtering.LookupUIEditorType.Default;
-            this.StatusFilterUIEditorContainerEdit.Size = new System.Drawing.Size(179, 22);
+            this.StatusFilterUIEditorContainerEdit.Size = new System.Drawing.Size(178, 22);
             this.StatusFilterUIEditorContainerEdit.StyleController = this.layoutControl1;
             this.StatusFilterUIEditorContainerEdit.TabIndex = 9;
             // 
@@ -201,7 +199,7 @@
             this.ItemForCategoryID.Location = new System.Drawing.Point(0, 61);
             this.ItemForCategoryID.Name = "ItemForCategoryID";
             this.ItemForCategoryID.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
-            this.ItemForCategoryID.Size = new System.Drawing.Size(199, 61);
+            this.ItemForCategoryID.Size = new System.Drawing.Size(198, 61);
             this.ItemForCategoryID.StartNewLine = true;
             this.ItemForCategoryID.Text = "CATEGORY";
             this.ItemForCategoryID.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
@@ -214,7 +212,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 122);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(199, 415);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(198, 415);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // ItemForStatus
@@ -225,7 +223,7 @@
             this.ItemForStatus.Location = new System.Drawing.Point(0, 0);
             this.ItemForStatus.Name = "ItemForStatus";
             this.ItemForStatus.Padding = new DevExpress.XtraLayout.Utils.Padding(10, 10, 10, 10);
-            this.ItemForStatus.Size = new System.Drawing.Size(199, 61);
+            this.ItemForStatus.Size = new System.Drawing.Size(198, 61);
             this.ItemForStatus.StartNewLine = true;
             this.ItemForStatus.Text = "STATUS";
             this.ItemForStatus.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
@@ -236,9 +234,9 @@
             // simpleSeparator1
             // 
             this.simpleSeparator1.AllowHotTrack = false;
-            this.simpleSeparator1.Location = new System.Drawing.Point(199, 0);
+            this.simpleSeparator1.Location = new System.Drawing.Point(198, 0);
             this.simpleSeparator1.Name = "simpleSeparator1";
-            this.simpleSeparator1.Size = new System.Drawing.Size(1, 537);
+            this.simpleSeparator1.Size = new System.Drawing.Size(2, 537);
             // 
             // categoryImages
             // 
@@ -293,19 +291,19 @@
         private DevExpress.Utils.Filtering.FilteringUIContext filteringUIContext1;
         private System.Windows.Forms.BindingSource taskBindingSource;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit categoryLookUpEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn colCategoryID;
+        private DevExpress.XtraGrid.Columns.GridColumn colCaption;
+        private DevExpress.XtraGrid.Columns.GridColumn colDescription;
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
         private DevExpress.XtraLayout.LayoutControlItem ItemForCategoryID;
         private DevExpress.XtraLayout.SimpleSeparator simpleSeparator1;
+        private DevExpress.XtraGrid.Columns.GridColumn colStatus;
         private DevExpress.XtraEditors.Filtering.FilterUIEditorContainerEdit CategoryIDFilterUIEditorContainerEdit;
         private DevExpress.XtraEditors.Filtering.FilterUIEditorContainerEdit StatusFilterUIEditorContainerEdit;
         private DevExpress.XtraLayout.LayoutControlItem ItemForStatus;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.Utils.SvgImageCollection categoryImages;
         private DevExpress.Utils.SvgImageCollection statusImages;
-        private DevExpress.XtraGrid.Columns.GridColumn colCategoryID;
-        private DevExpress.XtraGrid.Columns.GridColumn colCaption;
-        private DevExpress.XtraGrid.Columns.GridColumn colDescription;
-        private DevExpress.XtraGrid.Columns.GridColumn colStatus;
     }
 }
