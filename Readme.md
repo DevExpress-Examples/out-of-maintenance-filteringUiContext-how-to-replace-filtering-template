@@ -1,4 +1,7 @@
 # How to replace the filtering template for the FilteringUiContext component
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/142855029/)**
+<!-- run online end -->
 
 This example illustrates how to modify the FilteringUIContext component's template to replace the default filtering UI.
 
